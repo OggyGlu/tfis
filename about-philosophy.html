@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESLRs and Philosophy | First International School</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Internal Page Custom Structural Overrides */
+        .philosophy-hero {
+            background: linear-gradient(rgba(26, 86, 188, 0.85), rgba(17, 60, 136, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .philosophy-hero h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Statement Block Layouts */
+        .statement-card {
+            background-color: #fffdf6;
+            border-left: 4px solid var(--accent-red, #cc0000);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .statement-card h3 {
+            margin-top: 0;
+            color: var(--primary-dark, #113c88);
+            font-size: 20px;
+        }
+
+        /* ESLR Grid Layout Track */
+        .eslr-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .eslr-item {
+            background: #f4f7fc;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border-line, #e2e8f0);
+            position: relative;
+        }
+
+        .eslr-badge {
+            background: var(--primary-blue, #1a56bc);
+            color: white;
+            font-weight: bold;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .eslr-item h4 {
+            margin: 0 0 8px 0;
+            color: var(--primary-dark, #113c88);
+            font-size: 18px;
+        }
+
+        .eslr-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* --- Institutional Global Footer Layout --- */
+        .global-footer {
+            background-color: #12164a;
+            color: #e2e8f0;
+            padding: 50px 5% 20px 5%;
+            margin-top: 80px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            border-top: 4px solid var(--accent-gold, #f2c230);
+            clear: both; /* Ensures it sits below floating layout elements */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .footer-column-brand h4, 
+        .footer-column-links h5, 
+        .footer-column-contact h5 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column-brand p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #e2e8f0;
+        }
+
+        .footer-column-brand small {
+            color: var(--accent-gold, #f2c230);
+            font-style: italic;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .footer-column-links a {
+            display: block;
+            color: #a0aec0;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer-column-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-column-contact p {
+            color: #a0aec0;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .footer-copyright-bar {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+        
+        .footer-copyright-bar a:hover {
+            text-decoration: underline;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Brand Branding Section -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn active">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. INNER PAGE HERO BANNER -->
+    <section class="philosophy-hero">
+        <h1>School Vision, Mission & ESLRs</h1>
+    </section>
+
+    <!-- 4. TWO-COLUMN SPLIT GRID CONTENT AREA -->
+    <div class="two-column-layout">
+        
+        <!-- Left Section Panel: Sidebar Menu Navigation Link Stack -->
+        <aside class="sidebar-nav">
+            <a href="about-head-message.html">Head of School's Message</a>
+            <a href="about-founder-message.html">Founder and CEO's Message</a>
+            <a href="about-philosophy.html" class="active">ESLRs and Philosophy</a>
+            <a href="about-history.html">History</a>
+            <a href="about-admissions.html">Admissions</a>
+        </aside>
+
+        <!-- Right Main View Window Area Content Card -->
+        <main class="main-content">
+            <h2>Our Educational Foundations</h2>
+            <p>First International School operates under a clear framework dedicated to cultural understanding, critical academic analysis, and ethical local leadership development.</p>
+
+            <!-- Vision Block -->
+            <div class="statement-card">
+                <h3>Our Vision</h3>
+                <p>To foster an inclusive, globally integrated educational ecosystem where independent learners expand their individual potential to drive positive social development in an evolving 21st-century landscape.</p>
+            </div>
+
+            <!-- Mission Block -->
+            <div class="statement-card" style="border-left-color: var(--primary-blue, #1a56bc);">
+                <h3>Our Mission Statement</h3>
+                <p>We deliver an intensive international curriculum path combining cross-disciplinary analytical skills with advanced digital literacy. By matching high expectations with custom student care plans, we empower scholars to graduate as compassionate, ethical global citizens.</p>
+            </div>
+
+            <!-- ESLRs Section -->
+            <h2 style="margin-top: 40px;">Expected Schoolwide Learning Results (ESLRs)</h2>
+            <p>Our ESLRs represent the foundational traits and operational competencies we expect every graduating student to master during their tenure at First International School:</p>
+
+            <div class="eslr-grid">
+                <!-- ESLR 1 -->
+                <div class="eslr-item">
+                    <span class="eslr-badge">E</span>
+                    <h4>Effective Communicators</h4>
+                    <p>Students will express concepts clearly, listen with empathy, and present structured academic writing across various local and international language platforms.</p>
+                </div>
+
+                <!-- ESLR 2 -->
+                <div class="eslr-item" style="border-top: 3px solid var(--accent-gold, #ffcc00);">
+                    <span class="eslr-badge" style="background: var(--primary-dark, #113c88);">S</span>
+                    <h4>Strategic Thinkers & Problem Solvers</h4>
+                    <p>Students will utilize mathematical analysis, computational frameworks, and evidence-based logic to solve real-world community development puzzles.</p>
+                </div>
+
+                <!-- ESLR 3 -->
+                <div class="eslr-item" style="border-top: 3px solid var(--accent-red, #cc0000);">
+                    <span class="eslr-badge" style="background: var(--accent-red, #cc0000);">L</span>
+                    <h4>Leaders with Integrity</h4>
+                    <p>Students will demonstrate deep moral commitment, respect collaborative group decisions, and accept accountability while working within diverse project tracks.</p>
+                </div>
+
+                <!-- ESLR 4 -->
+                <div class="eslr-item">
+                    <span class="eslr-badge">R</span>
+                    <h4>Responsible Global Citizens</h4>
+                    <p>Students will understand intercultural traditions, appreciate socioeconomic perspectives, and champion localized environmental conservation measures.</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    
+    <!-- 4. INSTITUTIONAL GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-column-brand">
+                <h4>THE FIRST</h4>
+                <p>International School</p>
+                <small>Genuine · Grit · Gratitude</small>
+            </div>
+            <div class="footer-column-links">
+                <h5>Quick Links</h5>
+                <a href="about-philosophy.html">Our Philosophy</a>
+                <a href="about-admissions.html">Admissions Guide</a>
+                <a href="facilities.html">Campus Facilities</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-column-contact">
+                <h5>Administrative Hub</h5>
+                <p>📍 No.25(B), 52nd St, Mandalay, Myanmar</p>
+                <p>📞 +95 9 265459667</p>
+                <p>✉️ info@firstinternational.edu</p>
+            </div>
+        </div>
+        <div class="footer-copyright-bar">
+            <p>&copy; 2026 First International School. All Rights Reserved. | Website Designed & Developed by Your Name</p>
+        </div>
+    </footer>
+
+</body>
+</html>

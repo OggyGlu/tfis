@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | First International School</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* --- Contact-Specific Layout Styles --- */
+        .contact-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 4%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                margin: 40px auto;
+            }
+        }
+
+        .contact-info-zone h2 {
+            color: var(--primary-blue, #1c226b);
+            border-bottom: 2px solid var(--accent-red, #b81d24);
+            padding-bottom: 8px;
+            margin-top: 0;
+            font-size: 28px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .contact-info-zone p {
+            color: #4a5568;
+            font-size: 15.5px;
+            line-height: 1.6;
+        }
+
+        /* Card Track Layout Structure */
+        .card-track {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        /* Individual Content Information Cards */
+        .info-card {
+            background-color: #ffffff;
+            border-left: 5px solid var(--primary-blue, #1c226b);
+            border-radius: 4px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(28, 34, 107, 0.05);
+            border-top: 1px solid var(--border-line, #cbd2e6);
+            border-right: 1px solid var(--border-line, #cbd2e6);
+            border-bottom: 1px solid var(--border-line, #cbd2e6);
+        }
+
+        .info-card h3 {
+            margin: 0 0 12px 0;
+            color: var(--primary-blue, #1c226b);
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            margin: 6px 0;
+            font-size: 14.5px;
+            color: #555555;
+        }
+
+        .info-card a {
+            color: var(--primary-blue, #1c226b);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Right Panel Map Canvas Container */
+        .map-canvas-container {
+            border: 1px solid var(--border-line, #cbd2e6);
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 480px;
+            box-shadow: 0 4px 12px rgba(28, 34, 107, 0.05);
+        }
+
+        .map-canvas-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 480px;
+            border: 0;
+            display: block;
+        }
+
+        /* --- Footer Structural Fixes --- */
+        .global-footer {
+            background-color: #12164a;
+            color: #e2e8f0;
+            padding: 50px 5% 20px 5%;
+            margin-top: 80px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            border-top: 4px solid var(--accent-gold, #f2c230);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .footer-column-brand h4, 
+        .footer-column-links h5, 
+        .footer-column-contact h5 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column-brand p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #e2e8f0;
+        }
+
+        .footer-column-brand small {
+            color: var(--accent-gold, #f2c230);
+            font-style: italic;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .footer-column-links a {
+            display: block;
+            color: #a0aec0;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer-column-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-column-contact p {
+            color: #a0aec0;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .footer-copyright-bar {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Brand Branding Section -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item active">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN CONTACT SECTION GRID -->
+    <main class="contact-container">
+        
+        <div class="contact-info-zone">
+            <h2>Get In Touch</h2>
+            <p>Please reach out to our specific school units for queries related to campus visits, administrative records, or school operations.</p>
+            
+            <div class="card-track">
+                <div class="info-card">
+                    <h3>Main Administrative Office</h3>
+                    <p><strong>Location:</strong> No.25(B), 52nd St, Chan Aye Tharzan Township, Mandalay, Myanmar</p>
+                    <p><strong>Primary Help Desk:</strong> +95 9 265459667</p>
+                    <p><strong>Email Address:</strong> <a href="mailto:info@firstinternational.edu">info@firstinternational.edu</a></p>
+                    <p><strong>Operating Hours:</strong> Monday – Friday (8:00 AM – 4:00 PM)</p>
+                </div>
+
+                <div class="info-card" style="border-left-color: var(--accent-red, #b81d24);">
+                    <h3>Registrar & Administrative Records</h3>
+                    <p>For questions regarding student enrollments, academic transcript tracking, or documentation updates.</p>
+                    <p><strong>Direct Helpline:</strong> +95 9 968968812</p>
+                    <p><strong>Email Address:</strong> <a href="mailto:registrar@firstinternational.edu">registrar@firstinternational.edu</a></p>
+                </div>
+
+                <div class="info-card" style="border-left-color: var(--accent-gold, #f2c230);">
+                    <h3>Public Communications & Media</h3>
+                    <p>For events scheduling, institutional inquiries, or community announcements information.</p>
+                    <p><strong>Email Address:</strong> <a href="mailto:media@firstinternational.edu">media@firstinternational.edu</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Live Map Embed Layer -->
+        <div class="map-canvas-container">
+            <iframe 
+                src="https://google.com" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </main>
+
+        <!-- 4. INSTITUTIONAL GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-column-brand">
+                <h4>THE FIRST</h4>
+                <p>International School</p>
+                <small>Genuine · Grit · Gratitude</small>
+            </div>
+            <div class="footer-column-links">
+                <h5>Quick Links</h5>
+                <a href="about-philosophy.html">Our Philosophy</a>
+                <a href="about-admissions.html">Admissions Guide</a>
+                <a href="facilities.html">Campus Facilities</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-column-contact">
+                <h5>Administrative Hub</h5>
+                <p>📍 No.25(B), 52nd St, Mandalay, Myanmar</p>
+                <p>📞 +95 9 265459667</p>
+                <p>✉️ info@firstinternational.edu</p>
+            </div>
+        </div>
+        <div class="footer-copyright-bar">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

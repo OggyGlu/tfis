@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder's Vision | First International School</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <style>
+        /* --- Founder Page Specific Custom Layout Overrides --- */
+        .founder-hero {
+            background: linear-gradient(rgba(26, 34, 107, 0.85), rgba(18, 22, 74, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .founder-hero h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Premium Executive Vision Profile Framing */
+        .founder-profile-block {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 35px;
+            background: #ffffff;
+            border: 1px solid var(--border-line, #cbd2e6);
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 25px;
+            box-shadow: 0 4px 12px rgba(28, 34, 107, 0.04);
+            border-top: 4px solid var(--accent-red, #b81d24); /* Accent border highlights CEO vision */
+        }
+
+        @media (max-width: 768px) {
+            .founder-profile-block {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+
+        .founder-photo-container {
+            height: 450px; /* Tall, premium vertical portrait frame */
+            background-color: var(--light-gray, #eff1f9);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-line, #cbd2e6);
+        }
+
+        .founder-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .founder-meta h3 {
+            margin: 0 0 4px 0;
+            color: var(--primary-blue, #1c226b);
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .founder-title-badge {
+            display: inline-block;
+            color: var(--accent-red, #b81d24);
+            font-size: 13.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .vision-quote {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--primary-blue, #1c226b);
+            border-left: 3px solid var(--accent-gold, #f2c230);
+            padding-left: 15px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .founder-message-text p {
+            font-size: 14.5px;
+            color: #444444;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. UPPER BRAND BRANDING HEADER -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn active">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. INNER PAGE HERO BANNER -->
+    <section class="founder-hero">
+        <h1>Founder's Address</h1>
+    </section>
+
+    <!-- 4. TWO-COLUMN SPLIT SIDEBAR NAVIGATION GRID -->
+    <div class="two-column-layout">
+        
+        <aside class="sidebar-nav">
+            <a href="about-head-message.html">Head of School's Message</a>
+            <a href="about-founder-message.html" class="active">Founder and CEO's Message</a>
+            <a href="about-philosophy.html">ESLRs and Philosophy</a>
+            <a href="about-history.html">History</a>
+            <a href="about-admissions.html">Admissions</a>
+        </aside>
+
+        <main class="main-content">
+            <h2>Message from our Founder & CEO</h2>
+            <p>First International School was established with a singular, clear core mission: to provide an uncompromising world-class learning space that empowers localized student communities to achieve competitive global success.</p>
+
+            <!-- Unified Single Executive Card Profile Block -->
+            <div class="founder-profile-block">
+                
+                <div class="founder-photo-container">
+                    <!-- Target image setup; simply crop your founder photo to 2:3 ratio and name it founder.jpg -->
+                    <img src="images/founder.jpg" alt="Founder and CEO Portrait" onerror="this.src='https://unsplash.com'">
+                </div>
+
+                <div class="founder-meta">
+                    <h3>Sai Thiha Aung</h3>
+                    <span class="founder-title-badge">Founder & Chief Executive Officer</span>
+                    
+                    <div class="vision-quote">
+                        "True education matches rigorous academic grit with an authentic moral compass. We don't just train students to pass tests; we cultivate global leaders who act with gratitude and lead with absolute integrity."
+                    </div>
+
+                    <div class="founder-message-text">
+                        <p>When we laid down our initial foundation parameters in 2016, our goal was to bridge the gap between regional potential and prestigious global university placements. By bringing together exceptional certified educators, international laboratory apparatus, and a safe, inquiry-driven school culture, we have created an ecosystem where students maximize their focus and performance daily.</p>
+                        <p>We invite you to join our journey as we continue expanding our academic tracks, localized facility investments, and cross-disciplinary enrichment programs to prepare tomorrow's visionaries.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- 5. INSTITUTIONAL GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-column-brand">
+                <h4>THE FIRST</h4>
+                <p>International School</p>
+                <small>Genuine · Grit · Gratitude</small>
+            </div>
+            <div class="footer-column-links">
+                <h5>Quick Links</h5>
+                <a href="about-philosophy.html">Our Philosophy</a>
+                <a href="about-admissions.html">Admissions Guide</a>
+                <a href="facilities.html">Campus Facilities</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-column-contact">
+                <h5>Administrative Hub</h5>
+                <p>📍 No.25(B), 52nd St, Mandalay, Myanmar</p>
+                <p>📞 +95 9 265459667</p>
+                <p>✉️ info@firstinternational.edu</p>
+            </div>
+        </div>
+        <div class="footer-copyright-bar">
+            <p>&copy; 2026 First International School. All Rights Reserved. | Website Designed & Developed by Your Name</p>
+        </div>
+    </footer>
+
+</body>
+</html>

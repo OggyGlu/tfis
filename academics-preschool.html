@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preschool Programme | First International School</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* --- Academics Specific Page Overrides --- */
+        .academics-hero {
+            background: linear-gradient(rgba(26, 34, 107, 0.85), rgba(18, 22, 74, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .academics-hero h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Pillars Layout Grid */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+
+        .level-card {
+            background-color: #ffffff;
+            border-top: 4px solid var(--primary-blue, #1c226b);
+            padding: 30px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(28, 34, 107, 0.05);
+            text-align: center;
+            border-left: 1px solid var(--border-line, #cbd2e6);
+            border-right: 1px solid var(--border-line, #cbd2e6);
+            border-bottom: 1px solid var(--border-line, #cbd2e6);
+        }
+
+        .level-card h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary-blue, #1c226b);
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .level-age {
+            display: inline-block;
+            color: var(--accent-red, #b81d24);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .level-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #555555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Brand Branding Section -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn active">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. INNER PAGE HERO BANNER -->
+    <section class="academics-hero">
+        <h1>Early Years Foundation Phase</h1>
+    </section>
+
+    <!-- 4. TWO-COLUMN SPLIT GRIDS LAYOUT CONTAINER -->
+    <div class="two-column-layout">
+        
+        <!-- Left Section Panel: Sidebar Menu Navigation (FIXED: Synchronized with your Top Menu setup) -->
+        <aside class="sidebar-nav">
+            <a href="academics-preschool.html" class="active">Preschool (Nursery - KG)</a>
+            <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+            <a href="academics-electives.html">Electives Program</a>
+            <a href="academics-extensions.html">IGCSE & GED Certification</a>
+        </aside>
+
+        <!-- Right Main View Window Area Content Card -->
+        <main class="main-content">
+            <h2>Preschool & Foundation Levels</h2>
+            <p>Our Early Years Foundation framework is structured to spark curiosity, encourage discovery, and cultivate a lifelong love for learning. We combine safe, play-based exploration with supportive sensory environments designed precisely for young scholars.</p>
+
+            <p>By mapping out explicit developmental milestones across three dedicated class tiers, our childhood educators ensure every student progresses naturally at a comfortable, confident rhythm.</p>
+
+            <h3 style="margin-top: 35px; color: var(--primary-blue);">Our Classroom Levels</h3>
+            <p>We divide our early foundation cycles into three focused age tiers to target specific social, linguistic, and motor milestones:</p>
+
+            <!-- Preschool Levels Grid -->
+            <div class="levels-grid">
+                <!-- Tier 1: Nursery -->
+                <div class="level-card">
+                    <h4>Nursery</h4>
+                    <span class="level-age">Age: 2 - 3 Years</span>
+                    <p>Focuses heavily on sensory play, early language development, and essential socialization milestones. Children build motor skills through fun tactile exercises, collaborative storytelling circles, and guided parallel play.</p>
+                </div>
+                
+                <!-- Tier 2: Pre-KG -->
+                <div class="level-card" style="border-top-color: var(--accent-red, #b81d24);">
+                    <h4>Pre-KG</h4>
+                    <span class="level-age" style="color: var(--primary-blue);">Age: 3 - 4 Years</span>
+                    <p>Introduces structured foundation skills including phonics recognition, basic mathematical sorting, and structural pattern shapes. Emphasis is placed on building emotional independence, sharing with peers, and practicing clean personal care habits.</p>
+                </div>
+                
+                <!-- Tier 3: KG -->
+                <div class="level-card" style="border-top-color: var(--accent-gold, #f2c230);">
+                    <h4>KG</h4>
+                    <span class="level-age">Age: 4 - 5 Years</span>
+                    <p>Prepares senior preschool students for smooth transitions into elementary school benchmarks. Curriculums introduce fundamental reading readiness, handwriting mechanics, advanced puzzle logic, and organized collaborative playground sports.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 35px; color: var(--primary-blue);">Safe, Inspiring Spaces</h3>
+            <p>Our foundation classrooms utilize friendly color palates, child-safe rounded furniture configurations, and premium non-toxic creative supply kits. All indoor interactive spaces and outdoor playgrounds are constantly monitored under strict teacher supervision vectors to ensure your child's safety.</p>
+        </main>
+
+    </div>
+
+    <!-- 5. INSTITUTIONAL GLOBAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-column-brand">
+                <h4>THE FIRST</h4>
+                <p>International School</p>
+                <small>Genuine · Grit · Gratitude</small>
+            </div>
+            <div class="footer-column-links">
+                <h5>Quick Links</h5>
+                <a href="about-philosophy.html">Our Philosophy</a>
+                <a href="about-admissions.html">Admissions Guide</a>
+                <a href="facilities.html">Campus Facilities</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-column-contact">
+                <h5>Administrative Hub</h5>
+                <p>📍 No.25(B), 52nd St, Mandalay, Myanmar</p>
+                <p>📞 +95 9 265459667</p>
+                <p>✉️ info@firstinternational.edu</p>
+            </div>
+        </div>
+        <div class="footer-copyright-bar">
+            <p>&copy; 2026 First International School. All Rights Reserved. | Website Designed & Developed by Your Name</p>
+        </div>
+    </footer>
+
+</body>
+</html>
