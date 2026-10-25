@@ -30,7 +30,7 @@ html, body {
 }
 
 /* ==========================================================================
-   1. TOP IDENTITY BRANDING BANNER
+   1. TOP IDENTITY BRANDING BANNER (FIXED DESKTOP ALIGNMENT)
    ========================================================================== */
 .brand-header {
     display: flex;
@@ -39,23 +39,24 @@ html, body {
     padding: 15px 4%;
     background-color: var(--cream-bg);
     border-bottom: 1px solid var(--border-line);
-    min-height: 130px;
+    min-height: 100px; /* Reduced fixed height limits to stop unwanted vertical spacing */
     width: 100%;
+    box-sizing: border-box;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
+    max-width: 60%; /* Allocates safe horizontal track space for wide corporate logos */
 }
 
 .logo-area img {
-    height: 140px;
-    width: auto;
+    height: 70px;          /* FIXED: Clean, prominent desktop vertical dimension bounds */
+    width: auto;           /* PROTECTS ASPECT: Keeps your brand typography perfectly crisp and un-squished */
     object-fit: contain;
-    transform: scale(2.2);
-    transform-origin: left center;
-    margin-left: -35px;
     display: block;
+    transform: none;       /* REMOVED BUG: Strips out the oversized scale(2.2) that cut off the text */
+    margin-left: 0;        /* Resets negative desktop alignment offsets */
 }
 
 .motto-ribbon {
@@ -63,6 +64,7 @@ html, body {
     align-items: center;
     gap: 10px;
     user-select: none;
+    max-width: 35%;
 }
 
 .motto-word {
