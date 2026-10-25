@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Facilities | First International School</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* --- Facilities-Specific Showcase Layout --- */
+        .facilities-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        .facilities-header h2 {
+            color: var(--primary-blue, #1c226b);
+            border-bottom: 2px solid var(--accent-red, #b81d24);
+            padding-bottom: 8px;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .facilities-header p {
+            color: #555;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 35px;
+        }
+
+        /* Interactive Grid Layout Track */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Custom Cards for Campus Structures */
+        .facility-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-line, #cbd2e6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(28, 34, 107, 0.12);
+        }
+
+        .facility-image-box {
+            height: 220px;
+            background-color: #eff1f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* High-quality placeholder visuals optimized for educational categories */
+        .facility-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .facility-card:hover .facility-image-box img {
+            transform: scale(1.05);
+        }
+
+        .facility-content {
+            padding: 25px;
+        }
+
+        .facility-content h3 {
+            margin: 0 0 12px 0;
+            color: var(--primary-blue, #1c226b);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .facility-content p {
+            margin: 0;
+            font-size: 14.5px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Specific logo override properties to prevent duplication bugs */
+        .logo-area img {
+            height: 140px;
+            width: auto;
+            object-fit: contain;
+            transform: scale(2.2);
+            transform-origin: left center;
+            margin-left: -35px;
+            display: block;
+        }
+
+        /* --- Institutional Footer Grid Layout --- */
+        .global-footer {
+            background-color: #12164a;
+            color: #e2e8f0;
+            padding: 50px 5% 20px 5%;
+            margin-top: 80px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            border-top: 4px solid var(--accent-gold, #f2c230);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .footer-column-brand h4, 
+        .footer-column-links h5, 
+        .footer-column-contact h5 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column-brand p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #e2e8f0;
+        }
+
+        .footer-column-brand small {
+            color: var(--accent-gold, #f2c230);
+            font-style: italic;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .footer-column-links a {
+            display: block;
+            color: #a0aec0;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer-column-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-column-contact p {
+            color: #a0aec0;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .footer-copyright-bar {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+        
+        .footer-copyright-bar a:hover {
+            text-decoration: underline;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Brand Branding Section -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item active">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN SECTION CONTAINER -->
+    <main class="facilities-container">
+        
+        <div class="facilities-header">
+            <h2>Our Campus Facilities</h2>
+            <p>First International School balances modern classrooms with comprehensive athletic venues and scientific laboratories to guarantee a world-class environment for student discovery.</p>
+        </div>
+
+        <div class="facilities-grid">
+            
+            <!-- Card 1: Modern Science Labs -->
+            <div class="facility-card">
+                <div class="facility-image-box">
+                    <img src="https://unsplash.com" alt="Science Laboratory">
+                </div>
+                <div class="facility-content">
+                    <h3>Advanced Science Laboratories</h3>
+                    <p>Equipped with modern chemistry, biology, and physics apparatus. Our lab tracks encourage students to run advanced empirical experiments under strict security baselines.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Digital Computing Hub -->
+            <div class="facility-card">
+                <div class="facility-image-box">
+                    <img src="https://unsplash.com" alt="Computer Laboratory">
+                </div>
+                <div class="facility-content">
+                    <h3>Digital Innovation & Computing Labs</h3>
+                    <p>Featuring modern high-performance desktop terminals. Students utilize this space for computational workflows, office software training, and digital design electives.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Central Resource Library -->
+            <div class="facility-card">
+                <div class="facility-image-box">
+                    <img src="https://unsplash.com" alt="School Library">
+                </div>
+                <div class="facility-content">
+                    <h3>Central Research Library</h3>
+                    <p>A quiet media center containing an extensive catalogue of international textbooks, research materials, fiction, and open digital access terminals for global research.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Modern Smart Classrooms -->
+            <div class="facility-card">
+                <div class="facility-image-box">
+                    <img src="https://unsplash.com" alt="Smart Classroom">
+                </div>
+                <div class="facility-content">
+                    <h3>Interactive Smart Classrooms</h3>
+                    <p>Every classroom incorporates bright multi-media projection systems, modern climate control systems, and ergonomic seating arrays to optimize learning concentration.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Athletics Complex -->
+            <div class="facility-card">
+                <div class="facility-image-box">
+                    <img src="https://unsplash.com" alt="Sports Court">
+                </div>
+                <div class="facility-content">
+                    <h3>Indoor & Outdoor Athletics Complex</h3>
+                    <p>Our expansive recreational zones feature multipurpose indoor basketball courts, professional outdoor football greens, and dedicated early-years safe play fields.</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Fine Arts and Music Center -->
+            <div class="facility-card">
+                <div class="facility-image-box">
+                    <img src="https://unsplash.com" alt="Art Studio">
+                </div>
+                <div class="facility-content">
+                    <h3>Creative Arts & Music Studios</h3>
+                    <p>A vibrant, open studio zone configured for painting, sculpture, and musical instrument practice. Includes specialized acoustic treatment zones for group rehearsals.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h4>Our School</h4>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer-col">
+                <h4>Quick Explorations</h4>
+                <ul class="footer-links">
+                    <li><a href="about-philosophy.html">Mission & Philosophy</a></li>
+                    <li><a href="about-admissions.html">Admissions Overview</a></li>
+                    <li><a href="facilities.html">Campus Showcases</a></li>
+                    <li><a href="contact.html">Contact Administrative Offices</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p>
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
+                </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First International School | Home</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Homepage-specific structural extensions */
+        .stats-bar {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            margin: 0;
+            font-size: 36px;
+            color: var(--accent-gold);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .home-welcome-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .home-welcome-section h2 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .home-welcome-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .highlight-card {
+            background: #f4f7fc;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--primary-blue);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Upper Brand Branding Section -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item active">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+                <!-- 3. MAIN SPLASH HERO SLIDER CAROUSEL -->
+    <section class="slider-viewport">
+        <!-- Slide 1 -->
+        <div class="main-slide fade active">
+            <!-- If your file is a png, change the .jpg extension to .png right here -->
+            <img src="images/slide-campus.jpg" alt="Main Campus Building" onerror="this.src='images/slide-campus.png'">
+            <div class="slider-caption">
+                <h1>Welcome to The First International School</h1>
+                <p>Nurturing globally involved citizens prepared for academic achievements and 21st-century leadership.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="main-slide fade">
+            <img src="images/slide-classroom.jpg" alt="Modern Smart Classrooms" onerror="this.src='images/slide-classroom.png'">
+            <div class="slider-caption">
+                <h1>Innovative Learning Environments</h1>
+                <p>Equipped with state-of-the-art interactive smart classrooms and empirical science labs.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="main-slide fade">
+            <img src="images/slide-athletics.jpg" alt="Athletic Complex" onerror="this.src='images/slide-athletics.png'">
+            <div class="slider-caption">
+                <h1>Holistic Physical Development</h1>
+                <p>Expansive sports fields and indoor courts backing up healthy competitive athletic growth.</p>
+            </div>
+        </div>
+
+        <!-- Manual Navigation Arrow Buttons -->
+        <button class="slide-arrow prev-trigger" id="prevBtn">&#10094;</button>
+        <button class="slide-arrow next-trigger" id="nextBtn">&#10095;</button>
+
+        <!-- Dynamic Navigation Dots Indicator Strip -->
+        <div class="slider-dots-container" id="dotsContainer">
+            <span class="slide-dot active-dot" data-index="0"></span>
+            <span class="slide-dot" data-index="1"></span>
+            <span class="slide-dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- 4. ADDED SECTION: KEY CAMPUS STATS BAR -->
+    <section class="stats-bar">
+        <div class="stat-item">
+            <h2>40+</h2>
+            <p>Nationalities</p>
+        </div>
+        <div class="stat-item">
+            <h2>1:8</h2>
+            <p>Teacher-Student Ratio</p>
+        </div>
+        <div class="stat-item">
+            <h2>100%</h2>
+            <p>University Acceptance</p>
+        </div>
+    </section>
+
+    <!-- 5. MAIN CORE CONTENT ZONE -->
+    <main class="container" style="max-width: 1200px; margin: 40px auto; padding: 0 5%; box-sizing: border-box;">
+        
+        <section class="home-welcome-section">
+            <h2>Welcome to Our Campus</h2>
+            <p>
+                First International School provides a high-quality educational framework preparing global-minded citizens for higher academic standards. 
+                We combine rigorous curriculum structures with robust athletics and fine arts pathways.
+            </p>
+        </section>
+
+        <!-- Highlights Grid Block -->
+        <div class="highlights-grid">
+            <div class="highlight-card" style="border-top-color: var(--accent-red);">
+                <h3>Latest Announcements</h3>
+                <p style="font-size: 14px; color: #555;">Term 1 examination schedules and extracurricular schedules have been officially finalized. Check specific academic tabs for calendar schedules.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>School Accreditations</h3>
+                <p style="font-size: 14px; color: #555;">We maintain active institutional candidate alignment status with global frameworks including WASC, Cambridge Assessment International Education, and College Board AP paths.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h4>Our School</h4>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer-col">
+                <h4>Quick Explorations</h4>
+                <ul class="footer-links">
+                    <li><a href="about-philosophy.html">Mission & Philosophy</a></li>
+                    <li><a href="about-admissions.html">Admissions Overview</a></li>
+                    <li><a href="facilities.html">Campus Showcases</a></li>
+                    <li><a href="contact.html">Contact Administrative Offices</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p>
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
+                </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

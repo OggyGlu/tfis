@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electives & Co-Curricular Programs | The First International School</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <style>
+        /* --- Electives-Specific Curricular Focus Layout Overrides --- */
+        .electives-hero {
+            background: linear-gradient(rgba(26, 34, 107, 0.85), rgba(18, 22, 74, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .electives-hero h1 { margin: 0; font-size: 32px; letter-spacing: 0.5px; }
+
+        /* Unified Matrix Grid System */
+        .curriculum-matrix {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 25px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .subject-category-card {
+            background: #ffffff;
+            border: 1px solid var(--border-line, #cbd2e6);
+            border-radius: 6px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(28, 34, 107, 0.02);
+            border-left: 4px solid var(--primary-blue, #1c226b);
+            box-sizing: border-box;
+        }
+
+        .subject-category-card.style-red-card { border-left-color: var(--accent-red, #b81d24); }
+        .subject-category-card.style-gold-card { border-left-color: var(--accent-gold, #f2c230); }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .category-icon { font-size: 24px; }
+        .category-title { margin: 0; font-size: 19px; font-weight: 800; color: var(--primary-blue, #1c226b); }
+        .curriculum-desc { font-size: 14.5px; color: #555555; line-height: 1.6; margin: 0 0 15px 0; }
+
+        .token-stream {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .subject-token {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            display: inline-block;
+        }
+
+        .cca-token { background-color: #fef3c7; color: #92400e; border-color: #fde68a; }
+        .additional-token { background-color: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. UPPER BRAND BRANDING HEADER -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                <a href="index.html" class="nav-item">Home</a>
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn active">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. INNER PAGE HERO BANNER -->
+    <section class="electives-hero">
+        <h1>Electives & Co-Curricular Track Focus</h1>
+    </section>
+
+    <!-- 4. TWO-COLUMN SPLIT SIDEBAR NAVIGATION GRID -->
+    <div class="two-column-layout">
+        
+        <aside class="sidebar-nav">
+            <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+            <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+            <a href="academics-electives.html" class="active">Electives Program</a>
+            <a href="academics-extensions.html">IGCSE & GED Certification</a>
+        </aside>
+
+        <main class="main-content">
+            <h2>Specialized Learning Streams</h2>
+            <p>Our curriculum program reaches beyond basic textbooks. We provide structured avenues engineered to challenge student logic networks, cultivate bilingual communication, and expand technological literacy:</p>
+
+            <div class="curriculum-matrix">
+                
+                <!-- Category 2: Additional Subjects -->
+                <div class="subject-category-card" style="border-left-color: var(--accent-red);">
+                    <div class="category-header">
+                        <span class="category-icon">🧩</span>
+                        <h3 class="category-title">Additional Subjects</h3>
+                    </div>
+                    <p class="curriculum-desc">Enrichment modules engineered to broaden global awareness, technological fluency, and regional linguistic roots across all grade blocks natively:</p>
+                    <div class="token-stream">
+                        <span class="subject-token additional-token">Myanmar</span>
+                        <span class="subject-token additional-token">Social Studies</span>
+                        <span class="subject-token additional-token">Olympiad Mathematics</span>
+                        <span class="subject-token additional-token">LittleSEED</span>
+                        <span class="subject-token additional-token">ICT</span>
+                        <span class="subject-token additional-token">P.E (Physical Education)</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: CCAs -->
+                <div class="subject-category-card" style="border-left-color: var(--accent-gold);">
+                    <div class="category-header">
+                        <span class="category-icon">🏆</span>
+                        <h3 class="category-title">Co-Curricular Activities (CCA)</h3>
+                    </div>
+                    <p class="curriculum-desc">Mandatory physical and intellectual character development streams designed to cultivate high focus, strategic sportsmanship, team resilience, and analytical grit:</p>
+                    <div class="token-stream">
+                        <span class="subject-token cca-token">Music Class</span>
+                        <span class="subject-token cca-token">Sports</span>
+                        <span class="subject-token cca-token">Arts & Crafts</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h4>Our School</h4>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer-col">
+                <h4>Quick Explorations</h4>
+                <ul class="footer-links">
+                    <li><a href="about-philosophy.html">Mission & Philosophy</a></li>
+                    <li><a href="about-admissions.html">Admissions Overview</a></li>
+                    <li><a href="facilities.html">Campus Showcases</a></li>
+                    <li><a href="contact.html">Contact Administrative Offices</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p>
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
+                </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

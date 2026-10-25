@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School History | First International School</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Internal Page Custom Structural Overrides */
+        .history-hero {
+            background: linear-gradient(rgba(26, 86, 188, 0.85), rgba(17, 60, 136, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .history-hero h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Timeline Structural Layout Track */
+        .timeline-container {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 4px solid var(--primary-blue, #1a56bc);
+        }
+
+        .timeline-block {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-block::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 4px;
+            background: var(--accent-red, #cc0000);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .timeline-year {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--accent-red, #cc0000);
+            margin: 0 0 5px 0;
+            display: inline-block;
+        }
+
+        .timeline-content-box {
+            background: #f4f7fc;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border-line, #e2e8f0);
+            margin-top: 5px;
+        }
+
+        .timeline-content-box h4 {
+            margin: 0 0 8px 0;
+            color: var(--primary-dark, #113c88);
+            font-size: 16px;
+        }
+
+        .timeline-content-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* --- Institutional Global Footer Layout --- */
+        .global-footer {
+            background-color: #12164a;
+            color: #e2e8f0;
+            padding: 50px 5% 20px 5%;
+            margin-top: 80px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            border-top: 4px solid var(--accent-gold, #f2c230);
+            clear: both; /* Ensures it sits below floating layout elements */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .footer-column-brand h4, 
+        .footer-column-links h5, 
+        .footer-column-contact h5 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column-brand p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #e2e8f0;
+        }
+
+        .footer-column-brand small {
+            color: var(--accent-gold, #f2c230);
+            font-style: italic;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .footer-column-links a {
+            display: block;
+            color: #a0aec0;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer-column-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-column-contact p {
+            color: #a0aec0;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .footer-copyright-bar {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+        
+        .footer-copyright-bar a:hover {
+            text-decoration: underline;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Brand Branding Section -->
+    <div class="brand-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="images/logo-full.png" alt="The First International School">
+            </a>
+        </div>
+        <!-- Right Side: Official Institutional Motto Ribbon -->
+        <div class="motto-ribbon">
+            <span class="motto-word">Genuine</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Grit</span>
+            <span class="motto-divider">&middot;</span>
+            <span class="motto-word">Gratitude</span>
+        </div>
+    </div>
+
+    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <!-- Mobile Toggle Mechanism -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
+            <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
+            
+            <!-- Unified Menu List Wrapper -->
+            <div class="nav-menu-wrapper">
+                <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
+                
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <!-- Fixed Dropdown 1: About -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn active">About ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about-head-message.html">Head of School's Message</a>
+                        <a href="about-founder-message.html">Founder and CEO's Message</a>
+                        <a href="about-philosophy.html">ESLRs and Philosophy</a>
+                        <a href="about-history.html">History</a>
+                        <a href="about-admissions.html">Admissions</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 2: Academics -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
+                    <div class="dropdown-content">
+                        <a href="academics-preschool.html">Preschool (Nursery - KG)</a>
+                        <a href="academics-elementary.html">Grade 1 - 8 Core Education</a>
+                        <a href="academics-electives.html">Electives Program</a>
+                        <a href="academics-extensions.html">IGCSE & GED Certification</a>
+                    </div>
+                </div>
+
+                <!-- Fixed Dropdown 3: Activities -->
+                <div class="dropdown" tabindex="0">
+                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
+                    <div class="dropdown-content">
+                        <a href="activities-clubs.html">After School Clubs</a>
+                        <a href="activities-discover-life.html">Discover Life</a>
+                    </div>
+                </div>
+
+                <a href="facilities.html" class="nav-item">Facilities</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. INNER PAGE HERO BANNER -->
+    <section class="history-hero">
+        <h1>Our School Journey</h1>
+    </section>
+
+    <!-- 4. TWO-COLUMN SPLIT GRID CONTENT AREA -->
+    <div class="two-column-layout">
+        
+        <!-- Left Section Panel: Sidebar Menu Navigation Link Stack -->
+        <aside class="sidebar-nav">
+            <a href="about-head-message.html">Head of School's Message</a>
+            <a href="about-founder-message.html">Founder and CEO's Message</a>
+            <a href="about-philosophy.html">ESLRs and Philosophy</a>
+            <a href="about-history.html" class="active">History</a>
+            <a href="about-admissions.html">Admissions</a>
+        </aside>
+
+        <!-- Right Main View Window Area Content Card -->
+        <main class="main-content">
+            <h2>The History of First International School</h2>
+            <p>Founded on a commitment to international academic achievement, our institution has grown to become an educational beacon in the region, bridging localized talent pools with prestigious global universities.</p>
+            
+            <p>From our initial intake of primary scholars to our expansive secondary divisions today, we have continually upgraded our physical labs, localized teacher qualification criteria, and technical stack to support world-class discovery pathways.</p>
+
+            <h3 style="margin-top: 40px; color: var(--primary-blue, #1a56bc);">Milestones & Evolution</h3>
+            
+            <!-- Timeline Tracking Architecture -->
+            <div class="timeline-container">
+                
+                <!-- Timeline Block 1 -->
+                <div class="timeline-block">
+                    <span class="timeline-year">2016</span>
+                    <div class="timeline-content-box">
+                        <h4>The Founding Vision</h4>
+                        <p>First International School opens its initial campus doors with a commitment to providing high-quality, international-standard education. The school begins with an enrollment of 45 preschool and early elementary students.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Block 2 -->
+                <div class="timeline-block">
+                    <span class="timeline-year">2019</span>
+                    <div class="timeline-content-box">
+                        <h4>Secondary Division Expansion</h4>
+                        <p>To support growing communities, the school commissions its secondary block, introducing multi-disciplinary computing, modern physics labs, and resource-heavy media centers.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Block 3 -->
+                <div class="timeline-block">
+                    <span class="timeline-year">2022</span>
+                    <div class="timeline-content-box">
+                        <h4>International Program Integration</h4>
+                        <p>The academic council aligns the curriculum tracks with Cambridge Assessments International Education benchmarks and introduces Advanced Placement (AP) frameworks for high school divisions.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Block 4 -->
+                <div class="timeline-block" style="margin-bottom: 0;">
+                    <span class="timeline-year">2025 - Present</span>
+                    <div class="timeline-content-box" style="border-top: 3px solid var(--primary-blue, #1a56bc);">
+                        <h4>Global Accreditation Candidacy</h4>
+                        <p>The school formally enters active candidacy alignment status with the Western Association of Schools and Colleges (WASC). Today, our diverse student population spans over multi-disciplinary paths preparing for leading global spaces.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h4>Our School</h4>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer-col">
+                <h4>Quick Explorations</h4>
+                <ul class="footer-links">
+                    <li><a href="about-philosophy.html">Mission & Philosophy</a></li>
+                    <li><a href="about-admissions.html">Admissions Overview</a></li>
+                    <li><a href="facilities.html">Campus Showcases</a></li>
+                    <li><a href="contact.html">Contact Administrative Offices</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p>
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
+                </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

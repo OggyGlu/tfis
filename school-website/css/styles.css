@@ -1,0 +1,734 @@
+/* ==========================================================================
+   UNIVERSAL THEME VARIABLES & OVERFLOW SHIELD
+   ========================================================================== */
+:root {
+    --primary-blue: #1c226b;       /* Official rich navy from your emblem image */
+    --primary-dark: #12164a;       /* Deep tone used for dark footer fillings */
+    --accent-red: #b81d24;         /* Vibrant crimson accent flag */
+    --accent-gold: #f2c230;        /* Premium gold color highlight token */
+    --cream-bg: #f7f8fc;           /* Light, structured background layer */
+    --text-dark: #1c226b;          /* Header title brand coloring */
+    --body-text: #333333;          /* Highly readable off-black text gray */
+    --light-gray: #eff1f9;         /* Sidebar navigation block filling */
+    --border-line: #cbd2e6;        /* Layout line separation dividers */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body-text);
+    background-color: #ffffff;
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden; /* THE OVERFLOW SHIELD: Stops any side-to-side page splitting or sliding bugs */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ==========================================================================
+   1. TOP IDENTITY BRANDING BANNER
+   ========================================================================== */
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 4%;
+    background-color: var(--cream-bg);
+    border-bottom: 1px solid var(--border-line);
+    min-height: 130px;
+    width: 100%;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+    transform: scale(2.2);
+    transform-origin: left center;
+    margin-left: -35px;
+    display: block;
+}
+
+.motto-ribbon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+
+.motto-word {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary-blue);
+    letter-spacing: 0.5px;
+}
+
+.motto-divider {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   2. CENTRAL GLOBAL NAVBAR & DROPDOWNS
+   ========================================================================== */
+.main-navbar {
+    background-color: var(--primary-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 2%;
+    width: 100%;
+}
+
+.nav-menu-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.menu-checkbox-input, .hamburger-toggle-btn, .menu-close-btn {
+    display: none;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 18px 24px;   /* Perfectly centers your navigation links vertically */
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-item:hover, .dropdown:hover .dropbtn {
+    background-color: var(--primary-dark);
+    color: var(--accent-gold);
+}
+
+.nav-item.active {
+    background-color: var(--primary-dark);
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 260px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f4f8;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==========================================================================
+   3. HERO VIEWS & TWO-COLUMN SIDEBAR LAYOUTS
+   ========================================================================== */
+.hero-view {
+    background: linear-gradient(rgba(28, 34, 107, 0.45), rgba(18, 22, 74, 0.45)), 
+                url('../images/slide-campus.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 10rem 2rem;
+    width: 100%;
+}
+
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 3%;
+    width: 100%;
+}
+
+.sidebar-nav {
+    background: var(--light-gray);
+    border-radius: 6px;
+    padding: 12px 0;
+    height: fit-content;
+    border: 1px solid var(--border-line);
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 14px 24px;
+    color: #333333;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-line);
+    font-size: 14.5px;
+}
+
+.sidebar-nav a:hover {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+}
+
+.sidebar-nav a.active {
+    background-color: var(--primary-blue) !important;
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.main-content h2 {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--accent-red);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 28px;
+}
+
+/* ==========================================================================
+   4. GLOBAL FOOTER STRUCTURE (SITE-WIDE UNIFORM ALIGNMENT)
+   ========================================================================== */
+.global-footer {
+    background-color: #12164a; 
+    color: #e2e8f0;
+    padding: 60px 5% 30px 5%;
+    margin-top: 90px;
+    border-top: 5px solid var(--accent-gold, #f2c230);
+    width: 100%;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #2d3748;
+    align-items: start; /* Forces all three column structures to line up flatly from the top */
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-weight: 800;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 3px;
+    height: 18px;
+    background-color: var(--accent-red, #b81d24);
+}
+
+.footer-col p {
+    font-size: 14.5px;
+    color: #a0aec0;
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+.footer-logo-badge {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 250px;
+    display: block;
+}
+
+.footer-logo-badge img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.95;
+    display: block;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold, #f2c230) !important;
+    text-decoration: none !important;
+}
+
+.footer-social-strip {
+    display: flex;
+    gap: 15px;
+    margin-top: 18px;
+    align-items: center;
+}
+
+.footer-social-strip a {
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.footer-social-strip img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    color: #718096;
+    font-size: 13.5px;
+}
+
+/* ==========================================================================
+   5. AIS-STYLE SLIDE-OUT DRAWER & MOBILE ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .brand-header {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 14px 4% !important;
+        min-height: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .logo-area {
+        display: flex !important;
+        align-items: center !important;
+        max-width: 52% !important;           /* FIXED: Gives more screen real estate to your school brand text */
+    }
+
+    .logo-area img {
+        width: 100% !important;              /* FIXED: Allows the image to expand boldly across its allocated width */
+        height: auto !important;             /* PROTECTS PROPORTIONS: Keeps emblem artwork completely crisp and un-squished */
+        max-height: 52px !important;         /* Locks it into a premium, non-bulky elevation frame */
+        transform: none !important;
+        margin-left: 0 !important;
+    }
+
+    .motto-ribbon {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 3px !important;                 /* Tight, elegant gaps save horizontal phone glass space */
+        max-width: 45% !important;           /* Compact container blocks stop text overlapping layout bugs */
+    }
+
+    .motto-word {
+        font-size: 11.5px !important;        /* Crisp, premium typography tracking dimensions */
+        font-weight: 700 !important;
+        letter-spacing: -0.3px !important;   /* Pulls text slightly tighter so it never wraps to a 2nd line */
+    }
+
+    .motto-divider {
+        font-size: 11px !important;
+        margin: 0 1px !important;
+    }
+
+    .main-navbar {
+        overflow: visible;
+        padding: 5px 0;
+    }
+
+    .nav-container {
+        padding: 0 4%;
+    }
+
+    .hamburger-toggle-btn {
+        display: inline-block !important;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 12px 0;
+        cursor: pointer;
+    }
+
+    .nav-menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: 5px 0 25px rgba(0,0,0,0.2);
+        z-index: 99999;
+        padding: 70px 20px 20px 20px;
+        transition: left 0.3s ease;
+    }
+
+    .menu-checkbox-input:checked ~ .nav-menu-wrapper {
+        left: 0; /* Glides open smoothly on touch taps */
+    }
+
+    .nav-item {
+        color: #333333 !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 15px 10px !important;
+        font-size: 16px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        background: transparent !important;
+    }
+
+    .menu-close-btn {
+        display: inline-block !important;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 32px;
+        color: #718096;
+        cursor: pointer;
+    }
+
+    /* Accordion Touch Dropdowns */
+    .dropdown {
+        width: 100%;
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none !important;
+        position: static !important;
+        background-color: #f8fafc !important;
+        padding-left: 15px !important;
+        width: 100% !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .dropdown:active .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block !important;
+    }
+
+    .dropdown-content a {
+        display: block !important;
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+        color: #4a5568 !important;
+        border-bottom: 1px solid #edf2f7 !important;
+    }
+
+    /* ==========================================================================
+       THE ABSOLUTE OVERFLOW CURE: REMOVING 104% MOBILE WIDTH BLOWOUTS 
+       ========================================================================== */
+    .two-column-layout {
+        display: block !important;
+        width: auto !important;
+        max-width: 100% !important;
+        margin: 20px 0 !important;
+        padding: 0 15px !important;
+    }
+
+    .sidebar-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: #eff1f9 !important;
+        padding: 5px 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        margin-bottom: 25px !important;
+    }
+
+    .sidebar-nav a {
+        background: transparent !important;
+        color: #333333 !important;
+        padding: 14px 20px !important;
+        border-bottom: 1px solid var(--border-line) !important;
+    }
+}
+
+/* ==========================================================================
+   MASTER CAROUSEL ENGINE (PASTE BELOW LINE 439)
+   ========================================================================== */
+.slider-viewport {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #12164a;
+    width: 100%;
+}
+
+.main-slide {
+    display: none; /* Hides extra slides so they stop stacking vertically */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main-slide.active {
+    display: block !important; /* Shows ONLY the current active background slide */
+}
+
+.main-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-slide::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(28, 34, 107, 0.4), rgba(18, 22, 74, 0.6));
+}
+
+.slider-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    width: 85%;
+    max-width: 800px;
+    z-index: 10;
+}
+
+.slider-caption h1 {
+    font-size: 38px;
+    font-weight: 900;
+    margin: 0 0 15px 0;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+.slider-caption p {
+    font-size: 17px;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(28, 34, 107, 0.4);
+    color: #ffffff;
+    border: none;
+    padding: 14px 18px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 20;
+}
+
+.prev-trigger { left: 20px; }
+.next-trigger { right: 20px; }
+
+.slider-dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slide-dot.active-dot {
+    background-color: var(--accent-gold, #f2c230);
+}
+
+.fade {
+    animation-name: slideFade;
+    animation-duration: 0.6s;
+}
+
+@keyframes slideFade {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* ==========================================================================
+   HIGH-PERFORMANCE INTERACTIVE CAMPUS MAP WRAPPER
+   ========================================================================== */
+.campus-map-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 4%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.map-iframe-shield {
+    width: 100%;
+    height: 450px;
+    background-color: var(--light-gray, #eff1f9);
+    border: 1px solid var(--border-line, #cbd2e6);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(28, 34, 107, 0.04);
+    overflow: hidden;
+}
+
+/* Forces the embedded map to collapse cleanly and stay completely inside phone screens */
+@media (max-width: 768px) {
+    .campus-map-wrapper {
+        margin: 25px 0;
+        padding: 0 15px;
+    }
+    .map-iframe-shield {
+        height: 320px; /* Lowers the window footprint for tight mobile glass screens */
+    }
+    .map-iframe-shield iframe {
+        height: 320px !important;
+    }
+}
+
+/* ==========================================================================
+   ACADEMIC MATRIX SECTIONS & PILLS STREAM ENGINE
+   ========================================================================== */
+.curriculum-matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.subject-category-card {
+    background: #ffffff;
+    border: 1px solid var(--border-line, #cbd2e6);
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(28, 34, 107, 0.02);
+    border-left: 4px solid var(--primary-blue, #1c226b);
+    box-sizing: border-box;
+}
+
+.subject-category-card.style-red-card { 
+    border-left-color: var(--accent-red, #b81d24); 
+}
+
+.subject-category-card.style-gold-card { 
+    border-left-color: var(--accent-gold, #f2c230); 
+}
+
+.category-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 12px; 
+}
+
+.category-icon { 
+    font-size: 24px; 
+}
+
+.category-title { 
+    margin: 0; 
+    font-size: 19px; 
+    font-weight: 800; 
+    color: var(--primary-blue); 
+}
+
+.curriculum-desc { 
+    font-size: 14.5px; 
+    color: #555555; 
+    line-height: 1.6; 
+    margin: 0 0 15px 0; 
+}
+
+.token-stream { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.subject-token {
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    display: inline-block;
+}
+
+.cca-token { 
+    background-color: #fef3c7; 
+    color: #92400e; 
+    border-color: #fde68a; 
+}
+
+.additional-token { 
+    background-color: #fee2e2; 
+    color: #991b1b; 
+    border-color: #fca5a5; 
+}
