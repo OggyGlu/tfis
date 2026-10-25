@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions Guide & Tuition Fees | First International School</title>
+    <title>Admissions Guide & School Fees | The First International School</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <style>
@@ -16,53 +16,18 @@
             margin-bottom: 20px;
         }
 
-        .admissions-hero h1 {
-            margin: 0;
-            font-size: 32px;
-            letter-spacing: 0.5px;
-        }
+        .admissions-hero h1 { margin: 0; font-size: 32px; letter-spacing: 0.5px; }
 
-        /* Information Steps Layout Track */
-        .process-track {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-            margin-bottom: 40px;
-        }
-
-        .step-box {
-            background-color: #f4f7fc;
-            border-left: 4px solid var(--accent-red, #b81d24);
-            padding: 20px;
-            border-radius: 0 6px 6px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
-        .step-box h4 {
-            margin: 0 0 8px 0;
-            color: var(--primary-blue, #1c226b);
-            font-size: 17px;
-        }
-
-        .step-box p {
-            margin: 0;
-            font-size: 14.5px;
-            color: #555555;
-        }
-
-        /* --- THE ULTIMATE TABLE OVERFLOW SHIELD --- */
+        /* Unified Table Components */
         .fee-table-container {
             width: 100%;
-            max-width: 100%;          /* Forces the box to lock onto your mobile screen width exactly */
-            overflow-x: auto;          /* Turns on smooth swiping for the wide columns inside */
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch; /* Ensures fluid touch swipe action on smartphones */
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             margin-top: 25px;
+            margin-bottom: 35px;
             border: 1px solid var(--border-line, #cbd2e6);
             border-radius: 6px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            display: block;            /* Ensures standard layout box formatting */
         }
 
         .fee-table {
@@ -70,7 +35,7 @@
             border-collapse: collapse;
             font-size: 14.5px;
             text-align: left;
-            min-width: 550px;          /* Table stays wide and clean, but is now safely trapped inside the scroll container above */
+            min-width: 600px;
         }
 
         .fee-table th {
@@ -86,25 +51,18 @@
             color: #444444;
         }
 
-        .fee-table tr:last-child td {
-            border-bottom: none;
-        }
+        .fee-table tr:nth-child(even) { background-color: #f8fafc; }
+        .fee-level { font-weight: 700; color: var(--primary-blue, #1c226b); }
+        .fee-price { font-weight: 700; color: var(--accent-red, #b81d24); text-align: right; }
 
-        .fee-table tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        .fee-level {
-            font-weight: 700;
-            color: var(--primary-blue, #1c226b);
-        }
-
-        /* Fixes inner column boundaries on mobile screen formats */
-        @media (max-width: 768px) {
-            .fee-table th, .fee-table td {
-                padding: 12px 14px;
-                font-size: 13.5px;
-            }
+        /* Highlight box for registration notes */
+        .note-callout {
+            background-color: #f4f7fc;
+            border-left: 4px solid var(--accent-gold, #f2c230);
+            padding: 15px 20px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 30px;
+            font-size: 14.5px;
         }
     </style>
 </head>
@@ -117,7 +75,6 @@
                 <img src="images/logo-full.png" alt="The First International School">
             </a>
         </div>
-        <!-- Right Side: Official Institutional Motto Ribbon -->
         <div class="motto-ribbon">
             <span class="motto-word">Genuine</span>
             <span class="motto-divider">&middot;</span>
@@ -127,19 +84,15 @@
         </div>
     </div>
 
-    <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
+    <!-- 2. CENTRAL NAVIGATION NAVBAR -->
     <nav class="main-navbar">
         <div class="nav-container">
-            <!-- Mobile Toggle Mechanism -->
             <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
             <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
             
-            <!-- Unified Menu List Wrapper -->
             <div class="nav-menu-wrapper">
                 <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
-                
                 <a href="index.html" class="nav-item">Home</a>
-                
                 <div class="dropdown" tabindex="0">
                     <a href="javascript:void(0);" class="nav-item dropbtn active">About ▾</a>
                     <div class="dropdown-content">
@@ -150,7 +103,6 @@
                         <a href="about-admissions.html">Admissions</a>
                     </div>
                 </div>
-
                 <div class="dropdown" tabindex="0">
                     <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
                     <div class="dropdown-content">
@@ -160,15 +112,6 @@
                         <a href="academics-extensions.html">IGCSE & GED Certification</a>
                     </div>
                 </div>
-
-                <div class="dropdown" tabindex="0">
-                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
-                    <div class="dropdown-content">
-                        <a href="activities-clubs.html">After School Clubs</a>
-                        <a href="activities-discover-life.html">Discover Life</a>
-                    </div>
-                </div>
-
                 <a href="facilities.html" class="nav-item">Facilities</a>
                 <a href="contact.html" class="nav-item">Contact Us</a>
             </div>
@@ -177,13 +120,12 @@
 
     <!-- 3. INNER PAGE HERO BANNER -->
     <section class="admissions-hero">
-        <h1>Admissions & Enrollment Guide</h1>
+        <h1>Admissions & Tuition Fees</h1>
     </section>
 
     <!-- 4. TWO-COLUMN SPLIT SIDEBAR NAVIGATION GRID -->
     <div class="two-column-layout">
         
-        <!-- Left Sidebar Navigation Link Stack -->
         <aside class="sidebar-nav">
             <a href="about-head-message.html">Head of School's Message</a>
             <a href="about-founder-message.html">Founder and CEO's Message</a>
@@ -192,87 +134,140 @@
             <a href="about-admissions.html" class="active">Admissions</a>
         </aside>
 
-        <!-- Right Main Content Canvas Area -->
         <main class="main-content">
-            <h2>Enrollment Criteria & Process</h2>
-            <p>Welcome to the First International School admissions hub. We accept applications year-round from local and international students who seek a comprehensive, cross-disciplinary global academic curriculum.</p>
+            <h2>School Fees Schedule (MMK)</h2>
+            <p>Here is our official tuition tier structure for the academic enrollment window, directly reflecting the certified school handbook schedules:</p>
 
-            <h3 style="margin-top: 30px; color: var(--primary-blue);">The Application Steps</h3>
-            <div class="process-track">
-                <div class="step-box">
-                    <h4>Step 1: Application Inquiry</h4>
-                    <p>Parents submit an official inquiry or campus tour reservation form through our administrative registrar office via phone or direct administrative email.</p>
-                </div>
-                <div class="step-box" style="border-left-color: var(--primary-blue);">
-                    <h4>Step 2: Documentation Submission</h4>
-                    <p>Provide previous school transcripts, student passport or birth certification records, and immunization health history records to our registrar desk.</p>
-                </div>
-                <div class="step-box" style="border-left-color: var(--accent-gold);">
-                    <h4>Step 3: Placement Assessment</h4>
-                    <p>Prospective students take a standard grade-level evaluation covering baseline English literacy, text analytical skills, and mathematical logic structures.</p>
-                </div>
-            </div>
-
-            <h2>Tuition Fees & Age Placements</h2>
-            <p>Below is our official grade-level configuration outlining baseline age brackets and annual registration structures for the upcoming academic year:</p>
-
-            <!-- Data Spreadsheet Grid Chart Wrap -->
             <div class="fee-table-container">
                 <table class="fee-table">
                     <thead>
                         <tr>
-                            <th>Academic Division</th>
-                            <th>Target Age Placement</th>
-                            <th>Annual Fees Schedule</th>
+                            <th>Grade Level / Program</th>
+                            <th>Target Age Class</th>
+                            <th style="text-align: right;">Tuition Cost</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="fee-level">Preschool / Early Foundation</td>
-                            <td>3 – 4 Years Old</td>
-                            <td>Available Upon Official Inquiry</td>
-                        </tr>
-                        <tr>
-                            <td class="fee-level">Elementary School (Grades 1–5)</td>
-                            <td>5 – 10 Years Old</td>
-                            <td>Available Upon Official Inquiry</td>
-                        </tr>
-                        <tr>
-                            <td class="fee-level">Middle School (Grades 6–8)</td>
-                            <td>11 – 13 Years Old</td>
-                            <td>Available Upon Official Inquiry</td>
-                        </tr>
+                        <tr><td class="fee-level">Nursery</td><td>3 to 4 Years Old</td><td class="fee-price">450,000 MMK</td></tr>
+                        <tr><td class="fee-level">Pre-KG</td><td>4 to 5 Years Old</td><td class="fee-price">450,000 MMK</td></tr>
+                        <tr><td class="fee-level">KG</td><td>5 to 6 Years Old</td><td class="fee-price">450,000 MMK</td></tr>
+                        <tr><td class="fee-level">Grade 1 to Grade 3</td><td>Primary Block</td><td class="fee-price">500,000 MMK</td></tr>
+                        <tr><td class="fee-level">Grade 4 to Grade 6</td><td>Middle School Lower</td><td class="fee-price">550,000 MMK</td></tr>
+                        <tr><td class="fee-level">Grade 7 to Grade 8</td><td>Middle School Upper</td><td class="fee-price">600,000 MMK</td></tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="note-callout">
+                <strong>New Student Enrollment Rule:</strong> One-time Registration Fees are fixed at <strong>100,000 MMK</strong>.
+            </div>
+
+            <h2>Additional Document & Resource Track Costs</h2>
+            <p>Mandatory materials and service fees calculated per academic tier block allocation:</p>
+
+            <div class="fee-table-container">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Division Category Program</th>
+                            <th>Annual Resource Type</th>
+                            <th style="text-align: right;">Cost Structure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="fee-level" rowspan="2">Pre-School <br> (Nursery to KG)</td>
+                        <td>Document Access Fees</td>
+                        <td class="fee-price">200,000 MMK</td>
+                    </tr>
+                    <tr>
+                        <td>Text Book Fees</td>
+                        <!-- FIXED COMPLETE CELL BLOCK: Stacks your textbook prices beautifully -->
+                        <td class="fee-price" style="text-align: right; vertical-align: middle; padding: 10px 14px; white-space: nowrap;">
+                            <div style="margin-bottom: 4px;">200,000 MMK <small style="font-weight: normal; color: #666;">(Pre-KG)</small></div>
+                            <div style="border-top: 1px dashed #cbd2e6; padding-top: 4px; margin-top: 4px;">300,000 MMK <small style="font-weight: normal; color: #666;">(KG)</small></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fee-level" rowspan="4">Grade 1 and Above</td>
+                        <td>Annual Maintenance Fees</td>
+                        <td class="fee-price">100,000 MMK</td>
+                    </tr>
+                    <tr>
+                        <td>Document Access Fees</td>
+                        <td class="fee-price">200,000 MMK</td>
+                    </tr>
+                    <tr>
+                        <td>Text Book Allocation Package</td>
+                        <td class="fee-price">600,000 MMK</td>
+                    </tr>
+                    <tr>
+                        <td>Olympiad Mathematics Resources</td>
+                        <td class="fee-price">300,000 MMK</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <div class="note-callout" style="border-left-color: var(--accent-red);">
+                <strong>Scholarship Program Available:</strong> A **100% Full Scholarship** is automatically awarded to exceptional student tracks who achieve gold medals inside the mathematics competition.
             </div>
         </main>
 
     </div>
 
-    <!-- 4. INSTITUTIONAL GLOBAL FOOTER -->
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
     <footer class="global-footer">
-        <div class="footer-container">
-            <div class="footer-column-brand">
-                <h4>THE FIRST</h4>
-                <p>International School</p>
-                <small>Genuine · Grit · Gratitude</small>
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h4>Our School</h4>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
             </div>
-            <div class="footer-column-links">
-                <h5>Quick Links</h5>
-                <a href="about-philosophy.html">Our Philosophy</a>
-                <a href="about-admissions.html">Admissions Guide</a>
-                <a href="facilities.html">Campus Facilities</a>
-                <a href="contact.html">Contact Us</a>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer-col">
+                <h4>Quick Explorations</h4>
+                <ul class="footer-links">
+                    <li><a href="about-philosophy.html">Mission & Philosophy</a></li>
+                    <li><a href="about-admissions.html">Admissions Overview</a></li>
+                    <li><a href="facilities.html">Campus Showcases</a></li>
+                    <li><a href="contact.html">Contact Administrative Offices</a></li>
+                </ul>
             </div>
-            <div class="footer-column-contact">
-                <h5>Administrative Hub</h5>
-                <p>📍 No.25(B), 52nd St, Mandalay, Myanmar</p>
-                <p>📞 +95 9 265459667</p>
-                <p>✉️ info@firstinternational.edu</p>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p>
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
+                </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
             </div>
+
         </div>
-        <div class="footer-copyright-bar">
-            <p>&copy; 2026 First International School. All Rights Reserved. | Website Designed & Developed by Your Name</p>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
         </div>
     </footer>
 

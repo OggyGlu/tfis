@@ -3,166 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESLRs and Philosophy | First International School</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Vision, Mission & Our 3G Values | The First International School</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <style>
-        /* Internal Page Custom Structural Overrides */
+        /* --- Philosophy Specific Card Layout Styles --- */
         .philosophy-hero {
-            background: linear-gradient(rgba(26, 86, 188, 0.85), rgba(17, 60, 136, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            background: linear-gradient(rgba(26, 34, 107, 0.85), rgba(18, 22, 74, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
             color: white;
             padding: 3rem 2rem;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .philosophy-hero h1 {
-            margin: 0;
-            font-size: 32px;
-            letter-spacing: 0.5px;
-        }
+        .philosophy-hero h1 { margin: 0; font-size: 32px; letter-spacing: 0.5px; }
 
-        /* Statement Block Layouts */
-        .statement-card {
-            background-color: #fffdf6;
-            border-left: 4px solid var(--accent-red, #cc0000);
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 0 6px 6px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        .statement-card h3 {
-            margin-top: 0;
-            color: var(--primary-dark, #113c88);
-            font-size: 20px;
-        }
-
-        /* ESLR Grid Layout Track */
-        .eslr-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .eslr-item {
-            background: #f4f7fc;
-            padding: 20px;
+        /* Unified Card Styling matching your screenshot precisely */
+        .framework-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-line, #cbd2e6);
             border-radius: 6px;
-            border: 1px solid var(--border-line, #e2e8f0);
-            position: relative;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 6px rgba(28, 34, 107, 0.01);
+            box-sizing: border-box;
         }
 
-        .eslr-badge {
-            background: var(--primary-blue, #1a56bc);
-            color: white;
-            font-weight: bold;
-            padding: 4px 10px;
-            font-size: 12px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .eslr-item h4 {
-            margin: 0 0 8px 0;
-            color: var(--primary-dark, #113c88);
-            font-size: 18px;
-        }
-
-        .eslr-item p {
-            margin: 0;
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* --- Institutional Global Footer Layout --- */
-        .global-footer {
-            background-color: #12164a;
-            color: #e2e8f0;
-            padding: 50px 5% 20px 5%;
-            margin-top: 80px;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            border-top: 4px solid var(--accent-gold, #f2c230);
-            clear: both; /* Ensures it sits below floating layout elements */
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #2d3748;
-        }
-
-        .footer-column-brand h4, 
-        .footer-column-links h5, 
-        .footer-column-contact h5 {
-            color: #ffffff;
-            font-size: 18px;
+        .framework-card h3 {
             margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .footer-column-brand p {
-            font-size: 16px;
-            margin: 5px 0;
-            color: #e2e8f0;
-        }
-
-        .footer-column-brand small {
-            color: var(--accent-gold, #f2c230);
-            font-style: italic;
-            display: block;
-            margin-top: 10px;
-        }
-
-        .footer-column-links a {
-            display: block;
-            color: #a0aec0;
-            text-decoration: none;
             margin-bottom: 12px;
-            transition: color 0.2s;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-blue, #1c226b);
         }
 
-        .footer-column-links a:hover {
+        .framework-card p {
+            margin: 0;
+            font-size: 15px;
+            color: #444444;
+            line-height: 1.7;
+        }
+
+        /* Distinct Left Border Accent Failsafes */
+        .border-red   { border-left: 4px solid var(--accent-red, #b81d24); }
+        .border-blue  { border-left: 4px solid var(--primary-blue, #1c226b); }
+        .border-gold  { border-left: 4px solid var(--accent-gold, #f2c230); }
+
+        /* Stylized Value Letter Badge Layout */
+        .value-badge {
+            background-color: var(--primary-blue, #1c226b);
             color: #ffffff;
-        }
-
-        .footer-column-contact p {
-            color: #a0aec0;
-            margin: 10px 0;
-            line-height: 1.5;
-        }
-
-        .footer-copyright-bar {
-            max-width: 1200px;
-            margin: 20px auto 0 auto;
-            text-align: center;
-            color: #718096;
-            font-size: 13px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-family: sans-serif;
         }
         
-        .footer-copyright-bar a:hover {
-            text-decoration: underline;
-            color: #ffffff !important;
-        }
+        .value-badge.badge-red { background-color: var(--accent-red, #b81d24); }
+        .value-badge.badge-gold { background-color: var(--accent-gold, #f2c230); color: #111; }
     </style>
 </head>
 <body>
 
-    <!-- Upper Brand Branding Section -->
+    <!-- 1. UPPER BRAND BRANDING HEADER -->
     <div class="brand-header">
         <div class="logo-area">
             <a href="index.html">
                 <img src="images/logo-full.png" alt="The First International School">
             </a>
         </div>
-        <!-- Right Side: Official Institutional Motto Ribbon -->
         <div class="motto-ribbon">
             <span class="motto-word">Genuine</span>
             <span class="motto-divider">&middot;</span>
@@ -175,17 +90,12 @@
     <!-- 2. CENTRAL DROPDOWN NAVIGATION NAVBAR -->
     <nav class="main-navbar">
         <div class="nav-container">
-            <!-- Mobile Toggle Mechanism -->
             <input type="checkbox" id="menu-toggle-checkbox" class="menu-checkbox-input">
             <label for="menu-toggle-checkbox" class="hamburger-toggle-btn">&#9776; Menu</label>
             
-            <!-- Unified Menu List Wrapper -->
             <div class="nav-menu-wrapper">
                 <label for="menu-toggle-checkbox" class="menu-close-btn">&times;</label>
-                
                 <a href="index.html" class="nav-item">Home</a>
-                
-                <!-- Fixed Dropdown 1: About -->
                 <div class="dropdown" tabindex="0">
                     <a href="javascript:void(0);" class="nav-item dropbtn active">About ▾</a>
                     <div class="dropdown-content">
@@ -196,8 +106,6 @@
                         <a href="about-admissions.html">Admissions</a>
                     </div>
                 </div>
-
-                <!-- Fixed Dropdown 2: Academics -->
                 <div class="dropdown" tabindex="0">
                     <a href="javascript:void(0);" class="nav-item dropbtn">Academics ▾</a>
                     <div class="dropdown-content">
@@ -207,16 +115,6 @@
                         <a href="academics-extensions.html">IGCSE & GED Certification</a>
                     </div>
                 </div>
-
-                <!-- Fixed Dropdown 3: Activities -->
-                <div class="dropdown" tabindex="0">
-                    <a href="javascript:void(0);" class="nav-item dropbtn">Activities ▾</a>
-                    <div class="dropdown-content">
-                        <a href="activities-clubs.html">After School Clubs</a>
-                        <a href="activities-discover-life.html">Discover Life</a>
-                    </div>
-                </div>
-
                 <a href="facilities.html" class="nav-item">Facilities</a>
                 <a href="contact.html" class="nav-item">Contact Us</a>
             </div>
@@ -225,13 +123,13 @@
 
     <!-- 3. INNER PAGE HERO BANNER -->
     <section class="philosophy-hero">
-        <h1>School Vision, Mission & ESLRs</h1>
+        <h1>Our Educational Foundations</h1>
     </section>
 
-    <!-- 4. TWO-COLUMN SPLIT GRID CONTENT AREA -->
+    <!-- 4. TWO-COLUMN SPLIT SIDEBAR NAVIGATION GRID -->
     <div class="two-column-layout">
         
-        <!-- Left Section Panel: Sidebar Menu Navigation Link Stack -->
+        <!-- Left Sidebar Navigation Stack -->
         <aside class="sidebar-nav">
             <a href="about-head-message.html">Head of School's Message</a>
             <a href="about-founder-message.html">Founder and CEO's Message</a>
@@ -240,84 +138,104 @@
             <a href="about-admissions.html">Admissions</a>
         </aside>
 
-        <!-- Right Main View Window Area Content Card -->
+        <!-- Right Main Content Area Column -->
         <main class="main-content">
             <h2>Our Educational Foundations</h2>
-            <p>First International School operates under a clear framework dedicated to cultural understanding, critical academic analysis, and ethical local leadership development.</p>
-
-            <!-- Vision Block -->
-            <div class="statement-card">
+            <p style="margin-bottom: 30px; color: #555;">The First International School operates under a clear framework dedicated to cultural understanding, critical academic analysis, and ethical local leadership development.</p>
+            
+            <!-- Vision Card Block -->
+            <div class="framework-card border-red">
                 <h3>Our Vision</h3>
-                <p>To foster an inclusive, globally integrated educational ecosystem where independent learners expand their individual potential to drive positive social development in an evolving 21st-century landscape.</p>
+                <p>To be a center of excellence that empowers students to lead with excellence, innovate with purpose and serve with social responsibility in a rapidly changing world</p>
             </div>
 
-            <!-- Mission Block -->
-            <div class="statement-card" style="border-left-color: var(--primary-blue, #1a56bc);">
-                <h3>Our Mission Statement</h3>
-                <p>We deliver an intensive international curriculum path combining cross-disciplinary analytical skills with advanced digital literacy. By matching high expectations with custom student care plans, we empower scholars to graduate as compassionate, ethical global citizens.</p>
+            <!-- Mission Card Block -->
+            <div class="framework-card border-blue">
+                <h3>Our Mission</h3>
+                <p>To provide a globally recognized education that nurtures curiosity, creativity, and character, empowering learners to lead as responsible global citizens</p>
             </div>
 
-            <!-- ESLRs Section -->
-            <h2 style="margin-top: 40px;">Expected Schoolwide Learning Results (ESLRs)</h2>
-            <p>Our ESLRs represent the foundational traits and operational competencies we expect every graduating student to master during their tenure at First International School:</p>
+            <!-- New Section Divider Header -->
+            <h2 style="margin-top: 45px; border-bottom: 2px solid var(--border-line); padding-bottom: 10px;">Our 3G Core Values</h2>
+            <p style="margin-bottom: 25px; color: #555;">Our 3G values represent the foundational traits and operational competencies we expect every student to master during their tenure at First International School:</p>
 
-            <div class="eslr-grid">
-                <!-- ESLR 1 -->
-                <div class="eslr-item">
-                    <span class="eslr-badge">E</span>
-                    <h4>Effective Communicators</h4>
-                    <p>Students will express concepts clearly, listen with empathy, and present structured academic writing across various local and international language platforms.</p>
-                </div>
-
-                <!-- ESLR 2 -->
-                <div class="eslr-item" style="border-top: 3px solid var(--accent-gold, #ffcc00);">
-                    <span class="eslr-badge" style="background: var(--primary-dark, #113c88);">S</span>
-                    <h4>Strategic Thinkers & Problem Solvers</h4>
-                    <p>Students will utilize mathematical analysis, computational frameworks, and evidence-based logic to solve real-world community development puzzles.</p>
-                </div>
-
-                <!-- ESLR 3 -->
-                <div class="eslr-item" style="border-top: 3px solid var(--accent-red, #cc0000);">
-                    <span class="eslr-badge" style="background: var(--accent-red, #cc0000);">L</span>
-                    <h4>Leaders with Integrity</h4>
-                    <p>Students will demonstrate deep moral commitment, respect collaborative group decisions, and accept accountability while working within diverse project tracks.</p>
-                </div>
-
-                <!-- ESLR 4 -->
-                <div class="eslr-item">
-                    <span class="eslr-badge">R</span>
-                    <h4>Responsible Global Citizens</h4>
-                    <p>Students will understand intercultural traditions, appreciate socioeconomic perspectives, and champion localized environmental conservation measures.</p>
-                </div>
+            <!-- 3G Card 1: Genuine -->
+            <div class="framework-card border-blue">
+                <div class="value-badge">G1</div>
+                <h3>Genuine</h3>
+                <p>Nurturing honesty, moral authenticity, and true transparency in character. Our students learn to stay sincere in their intentions, hold true to ethical boundaries, and build authentic connections within our global community.</p>
             </div>
+
+            <!-- 3G Card 2: Grit -->
+            <div class="framework-card border-red">
+                <div class="value-badge badge-red">G2</div>
+                <h3>Grit</h3>
+                <p>Cultivating unyielding resilience, work ethic, and passion through academic hurdles. Scholars approach complex scientific questions, mathematical structures, and competitive tracks with a determination that refuses to give up.</p>
+            </div>
+
+            <!-- 3G Card 3: Gratitude -->
+            <div class="framework-card border-gold">
+                <div class="value-badge badge-gold">G3</div>
+                <h3>Gratitude</h3>
+                <p>Instilling a profound sense of thankfulness, respect, and global appreciation. Students learn to celebrate their learning achievements, respect their heritage, and step forward as leaders who seek to serve their community with humility.</p>
+            </div>
+
         </main>
 
     </div>
     
-    <!-- 4. INSTITUTIONAL GLOBAL FOOTER -->
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
     <footer class="global-footer">
-        <div class="footer-container">
-            <div class="footer-column-brand">
-                <h4>THE FIRST</h4>
-                <p>International School</p>
-                <small>Genuine · Grit · Gratitude</small>
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col">
+                <h4>Our School</h4>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
             </div>
-            <div class="footer-column-links">
-                <h5>Quick Links</h5>
-                <a href="about-philosophy.html">Our Philosophy</a>
-                <a href="about-admissions.html">Admissions Guide</a>
-                <a href="facilities.html">Campus Facilities</a>
-                <a href="contact.html">Contact Us</a>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer-col">
+                <h4>Quick Explorations</h4>
+                <ul class="footer-links">
+                    <li><a href="about-philosophy.html">Mission & Philosophy</a></li>
+                    <li><a href="about-admissions.html">Admissions Overview</a></li>
+                    <li><a href="facilities.html">Campus Showcases</a></li>
+                    <li><a href="contact.html">Contact Administrative Offices</a></li>
+                </ul>
             </div>
-            <div class="footer-column-contact">
-                <h5>Administrative Hub</h5>
-                <p>📍 No.25(B), 52nd St, Mandalay, Myanmar</p>
-                <p>📞 +95 9 265459667</p>
-                <p>✉️ info@firstinternational.edu</p>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+               <p>
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
+                </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
             </div>
+
         </div>
-        <div class="footer-copyright-bar">
-            <p>&copy; 2026 First International School. All Rights Reserved. | Website Designed & Developed by Your Name</p>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 The First International School. All Rights Reserved.</p>
         </div>
     </footer>
 

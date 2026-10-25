@@ -67,66 +67,6 @@
             border-top: 4px solid var(--primary-blue);
         }
 
-        /* Professional Global Footer Layout */
-        .global-footer {
-            background-color: #12164a; /* Uses dark theme color */
-            color: #e2e8f0;
-            padding: 50px 5% 20px 5%;
-            font-size: 14px;
-            border-top: 5px solid var(--accent-gold);
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #2d3748;
-        }
-
-        .footer-col h4 {
-            color: white;
-            font-size: 16px;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-left: 3px solid var(--accent-red);
-            padding-left: 10px;
-        }
-
-        .footer-col p {
-            line-height: 1.6;
-            color: #a0aec0;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #a0aec0;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 20px auto 0 auto;
-            text-align: center;
-            color: #718096;
-            font-size: 12px;
-        }
     </style>
 </head>
 <body>
@@ -199,11 +139,12 @@
         </div>
     </nav>
 
-        <!-- 3. MAIN SPLASH HERO SLIDER CAROUSEL -->
+                <!-- 3. MAIN SPLASH HERO SLIDER CAROUSEL -->
     <section class="slider-viewport">
         <!-- Slide 1 -->
         <div class="main-slide fade active">
-            <img src="https://unsplash.com" alt="Main Campus Building">
+            <!-- If your file is a png, change the .jpg extension to .png right here -->
+            <img src="images/slide-campus.jpg" alt="Main Campus Building" onerror="this.src='images/slide-campus.png'">
             <div class="slider-caption">
                 <h1>Welcome to The First International School</h1>
                 <p>Nurturing globally involved citizens prepared for academic achievements and 21st-century leadership.</p>
@@ -212,7 +153,7 @@
 
         <!-- Slide 2 -->
         <div class="main-slide fade">
-            <img src="https://unsplash.com" alt="Modern Smart Classrooms">
+            <img src="images/slide-classroom.jpg" alt="Modern Smart Classrooms" onerror="this.src='images/slide-classroom.png'">
             <div class="slider-caption">
                 <h1>Innovative Learning Environments</h1>
                 <p>Equipped with state-of-the-art interactive smart classrooms and empirical science labs.</p>
@@ -221,7 +162,7 @@
 
         <!-- Slide 3 -->
         <div class="main-slide fade">
-            <img src="https://unsplash.com" alt="Athletic Complex">
+            <img src="images/slide-athletics.jpg" alt="Athletic Complex" onerror="this.src='images/slide-athletics.png'">
             <div class="slider-caption">
                 <h1>Holistic Physical Development</h1>
                 <p>Expansive sports fields and indoor courts backing up healthy competitive athletic growth.</p>
@@ -281,13 +222,22 @@
 
     </main>
 
-    <!-- 6. ADDED SECTION: COMPREHENSIVE INSTITUTIONAL FOOTER -->
+    <!-- 6. COMPREHENSIVE INSTITUTIONAL FOOTER -->
     <footer class="global-footer">
         <div class="footer-grid">
+            
+            <!-- Column 1: Brand Info -->
             <div class="footer-col">
                 <h4>Our School</h4>
-                <p>Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                <p style="margin-bottom: 10px;">Providing premium international education options that inspire structural knowledge development, critical analytics, and strong citizenship paths.</p>
+                
+                <!-- FIXED: Sits tightly below the text (margin-top: 5px) and aligns perfectly to the left edge -->
+                <div class="footer-logo-badge" style="margin-top: 5px; width: 100%; max-width: 250px; display: block;">
+                    <img src="images/logo-full-white.png" alt="The First International School Logo" style="width: 86%; height: auto; object-fit: contain; opacity: 0.95; display: block;">
+                </div>
             </div>
+
+            <!-- Column 2: Navigation Links -->
             <div class="footer-col">
                 <h4>Quick Explorations</h4>
                 <ul class="footer-links">
@@ -297,15 +247,31 @@
                     <li><a href="contact.html">Contact Administrative Offices</a></li>
                 </ul>
             </div>
+
+            <!-- Column 3: Contact Details + Local PNG Social Logos -->
             <div class="footer-col">
                 <h4>Contact Details</h4>
                 <p>
-                    <strong>Admin Line:</strong> +95 9 265459667<br>
-                    <strong>Email Address:</strong> info@firstinternational.edu<br>
-                    <strong>Office Schedule:</strong> Mon - Fri | 8:00 AM - 4:00 PM
+                    <strong>Admin Line: </strong>+95 9 755722446 | +95 9 785082418<br>
+                    <strong>Email Address: </strong>thefirstintlschool@gmail.com<br>
+                    <strong>Office Schedule: </strong>Mon - Fri | 8:00 AM - 4:00 PM
                 </p>
+                <div class="footer-social-strip">
+                    <a href="https://www.facebook.com/profile.php?id=100092704806485" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/facebook.png" alt="Facebook Channel Link">
+                    </a>
+                    <a href="https://www.tiktok.com/@thefirstintlschool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/tiktok.png" alt="TikTok Channel Link">
+                    </a>
+                    <a href="https://www.youtube.com/@TheFirstInternationalSchool" target="_blank" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <img src="images/youtube.png" alt="YouTube Channel Link">
+                    </a>
+                </div>
             </div>
+
         </div>
+
+        <!-- Absolute Bottom Copyright Ribbon Row -->
         <div class="footer-bottom">
             <p>&copy; 2026 The First International School. All Rights Reserved.</p>
         </div>
