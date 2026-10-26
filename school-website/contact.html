@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <style>
-        /* --- Premium Layout Custom Configuration --- */
+        /* ==========================================================================
+           FIX: THE ABSOLUTE MOBILE OVERFLOW CURE (PASTE OVER OLD DATA CARD CSS)
+           ========================================================================== */
         .contact-view-layout {
             max-width: 1200px;
             margin: 50px auto;
@@ -15,15 +17,16 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            width: 100%;
+            width: auto !important; /* FIXED: Changing from 100% to auto pulls cards back inside phone margins */
             box-sizing: border-box;
         }
 
         @media (max-width: 768px) {
             .contact-view-layout {
                 grid-template-columns: 1fr !important;
-                gap: 30px;
-                margin: 30px auto;
+                gap: 25px;
+                margin: 20px auto !important;
+                padding: 0 15px !important; /* Safe mobile side padding cushions */
             }
         }
 
@@ -31,6 +34,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            width: 100%;
         }
 
         .section-headline {
@@ -63,9 +67,11 @@
             background-color: #ffffff;
             border: 1px solid var(--border-line, #cbd2e6);
             border-radius: 4px;
-            padding: 24px;
+            padding: 20px !important;
             box-shadow: 0 4px 10px rgba(28, 34, 107, 0.02);
             transition: transform 0.2s ease;
+            width: auto !important; /* FIXED: Strips out the 104% width overlap overflow bug */
+            box-sizing: border-box !important; /* Forces layout padding calculations inside the box container */
         }
 
         .contact-data-card:hover {
@@ -203,9 +209,9 @@
             <!-- Card 1: Main Campus Admin Hub Office -->
             <div class="contact-data-card" style="border-left: 4px solid var(--primary-blue, #1c226b);">
                 <h3 class="card-title">Main Administrative Office</h3>
-                <div class="card-row"><strong>Campus Address:</strong> 32/7, Kan Baw Za (2) Road, Yay Aye Kwin Quarter, Taunggyi, Myanmar</div>
-                <div class="card-row"><strong>Primary Desk Lines:</strong> 09 755 722 446, 09 785 082 418</div>
-                <div class="card-row"><strong>Office Mailbox:</strong> thefirstinternational.campus3@gmail.com</div>
+                <div class="card-row"><strong>Campus Address:</strong> 32/7, Kanbawza (2) Street, Yay Aye Kwin Quarter, Taunggyi, South Shan State, Myanmar</div>
+                <div class="card-row"><strong>Primary Desk Lines:</strong> +95 9 755722446 | +95 9 785082418</div>
+                <div class="card-row"><strong>Office Mailbox:</strong> thefirstintlschool@gmail.com</div>
                 <div class="card-row"><strong>Operating Schedule:</strong> Monday – Friday (8:00 AM – 4:00 PM)</div>
             </div>
 
@@ -213,8 +219,8 @@
             <div class="contact-data-card" style="border-left: 4px solid var(--accent-red, #b81d24);">
                 <h3 class="card-title">Registrar & Admissions Inquiries</h3>
                 <div class="card-row">For direct questions regarding upcoming student registration limits, age evaluations, and enrollment handbook distributions.</div>
-                <div class="card-row"><strong>Inquiry Lines:</strong> 09 755 722 446</div>
-                <div class="card-row"><strong>Support Email:</strong> thefirstinternational.campus3@gmail.com</div>
+                <div class="card-row"><strong>Inquiry Lines:</strong> +95 9 755722446 | +95 9 785082418</div>
+                <div class="card-row"><strong>Support Email:</strong> thefirstintlschool@gmail.com</div>
             </div>
         </div>
 
